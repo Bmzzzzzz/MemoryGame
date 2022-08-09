@@ -1,8 +1,25 @@
 
-
+let ipchaCard = [];
+let idxflipcard = 0, counterId = 0, firstCard = 0, scoreName1 = 0, scoreName2 = 0;
+let name1 = "", name2 = "", numOfCrad = 0, currentName = "monky", element = "", idxPlay = 0;
 const card =[];
+const container = document.getElementById("container");
+const sounds = [
+    "./sounds/pop.wav",
+    "./sounds/swoosh.wav",
+    "./sounds/entry.wav",
+    "./sounds/sparkle.wav",
+    "./sounds/bloop.wav",
+    "./sounds/select-click.wav",
+    "./sounds/back-click.wav",
+    "./sounds/place-sym.wav",
+    "./sounds/win.wav",
+];
 
-
+function playSound(soundInd) {
+    const audio = new Audio(sounds[soundInd]);
+    audio.play();
+}
 
 function genreatedArray(gen) {
     // let gen = 12;
@@ -18,27 +35,8 @@ function genreatedArray(gen) {
     }
    
 }
-const shuffledArray = [];
-const container = document.getElementById("container");
-const sounds = [
-    "./sounds/pop.wav",
-    "./sounds/swoosh.wav",
-    "./sounds/entry.wav",
-    "./sounds/sparkle.wav",
-    "./sounds/bloop.wav",
-    "./sounds/select-click.wav",
-    "./sounds/back-click.wav",
-    "./sounds/place-sym.wav",
-    "./sounds/win.wav",
-];
-function playSound(soundInd) {
-    const audio = new Audio(sounds[soundInd]);
-    audio.play();
-}
 
-let ipchaCard = [];
-let idxflipcard = 0, counterId = 0, firstCard = 0, scoreName1 = 0, scoreName2 = 0;
-let name1 = "", name2 = "", numOfCrad = 0, currentName = "monky", element = "", idxPlay = 0;
+
 function closePopUp() {
     document.getElementById("popup").className = "closepop";
 }
@@ -61,14 +59,14 @@ function openPopUp(winner) {
 
 function flipCrad() {
 
-    if (element.id !== this.id) {//bolck type imself
-        if (idxflipcard <= 1) {
+    if (element.id !== this.id || idxflipcard<2) {//bolck type imself
+        if (idxflipcard <= 1 ) {
             this.className = 'front'
             playSound(1);
             ipchaCard[idxflipcard] = this.innerText;
             idxflipcard++;
-            console.log(idxflipcard);
-            if (idxflipcard > 1) {
+           
+            if (idxflipcard > 1 ) {
                 if (ipchaCard[1] === ipchaCard[0]) {
                     playSound(2);
                     this.removeEventListener('click', flipCrad);
@@ -98,13 +96,13 @@ function flipCrad() {
                 else {
 
                     setTimeout(() => {
+                        
                         this.className = 'back';
-                        // element = document.getElementById(firstCard);
-                        element.className = 'back'
+                        element.className = 'back';
                         idxflipcard = 0
                         firstCard = 0;
                         element = ""
-                    }, 400)
+                    }, 200)
                     if (currentName === name1) {
                         currentName = name2;
                         console.log(currentName);
