@@ -1,0 +1,94 @@
+
+
+#container{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    /* border: 10 px double green; */
+    /* padding:10px; */
+    /* margin: 5px 5px; */
+}
+
+body{
+    background-color: #023047;
+}   
+h1{
+    color: #8ecae6;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;   
+}
+.back {
+    border: 5px solid #219ebc;
+    padding:10px;
+    margin: 5px 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 60px;
+    width: 50px;
+    background-color: aliceblue;
+    font-size: 0.1px;
+    size: 20px;    
+}
+
+.front {
+    border: 5px solid #219ebc;
+    padding:10px;
+    margin: 5px 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 120px;
+    height: 60px;
+    width: 50px;
+    background-color: rgb(30, 19, 192);
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+.buttonOpen{
+    width: 80px;
+    height: 50px;
+    margin-top: 100px;
+   
+}
+
+
+.divInput1, .divInput2,.divCardNum{
+    margin-top: 50px;
+    padding: 70px;
+    font-size: 30PX;
+    color: #8ecae6;
+    font-family: 'Titillium Web', sans-serif;
+    width: 200px;
+    height: 100px;
+    align-items: center;
+    text-align: center;
+    
+}
+.name1,.name2,.currentName,.openpage,.buttonopenpage,.error{
+    color: #8ecae6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    display:flex;
+    justify-content: center;
+
+}
+
+.openpage{
+display: flex;
+justify-content: center;
+    
+}
+
+
+/* .buttonopenpage {
+
+  
+    justify-content: center;
+} */
+
+.error{
+    color: #8ecae6;
+}

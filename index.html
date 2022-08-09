@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Memory game</h1>
+   
+    <div id="openpage" class="openpage" ></div>
+    <div id="error" class="error"></div>
+    <div id="buttonopenpage" class="buttonopenpage" onclick=functionstart()></div>
+    <div id="container"></div>
+    <div class="closepopup" id="closepopup">
+      <button class="popup" name="back-home" id="popup" type="button" onclick=functionrestart()>Back to entry page</button>
+    </div>
+    <div class="tiePopup">
+      <h1>Tie!</h1>
+      <button class="tie-popup" name="back-home" type="button" >Back to entry page</button>
+    </div>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
